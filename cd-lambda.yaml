@@ -1,0 +1,80 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CloudFormation template for a CodeDeploy Blue-Green Deployment with Lambda
+
+Parameters:
+  LambdaFunctionName:
+    Type: String
+    Description: Name for the Lambda function
+  S3BucketName:
+    Type: String
+    Description: Name of the S3 bucket for application artifacts
+  S3ObjectKey:
+    Type: String
+    Description: Object key for the application artifacts in the S3 bucket
+
+Resources:
+  LambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: !Ref LambdaFunctionName
+      Handler: index.handler
+      Role: !GetAtt LambdaExecutionRole.Arn
+      Code:
+        S3Bucket: !Ref S3BucketName
+        S3Key: !Ref S3ObjectKey
+      Runtime: nodejs14.x
+    DependsOn: LambdaExecutionRole
+
+  LambdaExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub ${LambdaFunctionName}-Role
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AWSCodeDeployRoleForLambda
+        - arn:aws:iam::aws:policy/AWSLambda_FullAccess
+
+  Application:
+    Type: AWS::CodeDeploy::Application
+    Properties:
+      ApplicationName: MyCodeDeployApp
+
+  DeploymentGroup:
+    Type: AWS::CodeDeploy::DeploymentGroup
+    Properties:
+      ApplicationName: !Ref Application
+      DeploymentGroupName: MyDeploymentGroup
+      DeploymentConfigName: CodeDeployDefault.AllAtOnce
+      ServiceRoleArn: !GetAtt CodeDeployRole.Arn
+
+  CodeDeployRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: CodeDeployServiceRole
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: codedeploy.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole
+        - arn:aws:iam::aws:policy/AWSCodeDeploy_ReadOnlyAccess
+
+Outputs:
+  LambdaFunctionNameOutput:
+    Description: Lambda Function Name
+    Value: !Ref LambdaFunctionName
+  CodeDeployApplicationNameOutput:
+    Description: CodeDeploy Application Name
+    Value: !Ref Application
+  DeploymentGroupNameOutput:
+    Description: CodeDeploy Deployment Group Name
+    Value: MyDeploymentGroup
