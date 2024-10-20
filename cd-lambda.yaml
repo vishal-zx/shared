@@ -1,3 +1,22 @@
+In the past year, I have consistently completed all assigned tasks on time, delivering high-quality code while adhering to Barclays' standards and risk policies. Key accomplishments include:
+
+Integrating manifest-based deployments for IAM resources, which required synchronization across various branches and repositories, ultimately automating CI/CD pipelines for infrastructure resources.
+
+Managing and creating a generic Docker template for all ECS applications, significantly reducing maintenance efforts and costs.
+
+Implementing an environment comparison checker utility to identify differences between AWS environments, and a manifest comparison utility for detailed resource reports, reducing manual efforts for developers and testers.
+
+Tagging AWS resources to optimize costs and managing ad-hoc release activities.
+
+Ensuring no breaches in mandatory trainings and timesheets, and maintaining a collaborative team environment without negative or bureaucratic approaches.
+
+Automating tasks and improving job efficiencies, optimizing map tagging processes, and preventing incidents by identifying root causes and taking ownership of issues.
+
+Receiving recognition within the team and at the project level, including a spot award, for delivering high-quality products and services on time.
+
+
+
+
 AWSTemplateFormatVersion: '2010-09-09'
 Description: CloudFormation template for a CodeDeploy Blue-Green Deployment with Lambda
 
