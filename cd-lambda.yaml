@@ -1,146 +1,51 @@
-In the past year, I have consistently completed all assigned tasks on time, delivering high-quality code while adhering to Barclays' standards and risk policies. Key accomplishments include:
+Mindset Challenge
 
-Integrating manifest-based deployments for IAM resources, which required synchronization across various branches and repositories, ultimately automating CI/CD pipelines for infrastructure resources.
-
-Managing and creating a generic Docker template for all ECS applications, significantly reducing maintenance efforts and costs.
-
-Implementing an environment comparison checker utility to identify differences between AWS environments, and a manifest comparison utility for detailed resource reports, reducing manual efforts for developers and testers.
-
-Tagging AWS resources to optimize costs and managing ad-hoc release activities.
-
-Ensuring no breaches in mandatory trainings and timesheets, and maintaining a collaborative team environment without negative or bureaucratic approaches.
-
-Automating tasks and improving job efficiencies, optimizing map tagging processes, and preventing incidents by identifying root causes and taking ownership of issues.
-
-Receiving recognition within the team and at the project level, including a spot award, for delivering high-quality products and services on time.
+Developed and integrated Manifest-based deployments for IAM resources in our infrastructure, ensuring synchronized updates across various branches and repositories. This automation enhanced our CI/CD pipelines for infra resources.
 
 
+Mindset Drive
+
+Consistently delivered high-quality code, adhering to Barclays standards and risk factors.
+
+When new tasks arose, evaluated their feasibility, sought proper guidance, and delivered within deadlines, earning multiple recognitions, including a spot award.
 
 
-AWSTemplateFormatVersion: '2010-09-09'
-Description: CloudFormation template for a CodeDeploy Blue-Green Deployment with Lambda
+Mindset Empower
 
-Parameters:
-  LambdaFunctionName:
-    Type: String
-    Description: Name for the Lambda function
-  S3BucketName:
-    Type: String
-    Description: Name of the S3 bucket for application artifacts
-  S3ObjectKey:
-    Type: String
-    Description: Object key for the application artifacts in the S3 bucket
-
-Resources:
-  LambdaFunction:
-    Type: AWS::Lambda::Function
-    Properties:
-      FunctionName: !Ref LambdaFunctionName
-      Handler: index.handler
-      Role: !GetAtt LambdaExecutionRole.Arn
-      Code:
-        S3Bucket: !Ref S3BucketName
-        S3Key: !Ref S3ObjectKey
-      Runtime: nodejs14.x
-    DependsOn: LambdaExecutionRole
-
-  LambdaExecutionRole:
-    Type: AWS::IAM::Role
-    Properties:
-      RoleName: !Sub ${LambdaFunctionName}-Role
-      AssumeRolePolicyDocument:
-        Version: '2012-10-17'
-        Statement:
-          - Effect: Allow
-            Principal:
-              Service: lambda.amazonaws.com
-            Action: sts:AssumeRole
-      ManagedPolicyArns:
-        - arn:aws:iam::aws:policy/AWSCodeDeployRoleForLambda
-        - arn:aws:iam::aws:policy/AWSLambda_FullAccess
+Confidently completed all assigned tasks on time, ensuring proper delivery.
 
 
+Values Respect
 
-AWSTemplateFormatVersion: '2010-09-09'
-Description: CloudFormation template for a CodeDeploy Blue-Green Deployment with Lambda
-
-Resources:
-  LambdaFunction:
-    Type: AWS::Lambda::Function
-    Properties:
-      FunctionName: MyHelloWorldLambda
-      Handler: index.handler
-      Role: !GetAtt LambdaExecutionRole.Arn
-      Code:
-        ZipFile: |
-          const AWS = require('aws-sdk');
-          
-          exports.handler = async (event) => {
-              console.log('Hello World!');
-              
-              const response = {
-                  statusCode: 200,
-                  body: JSON.stringify('Hello from Lambda!'),
-              };
-              return response;
-          };
-      Runtime: nodejs14.x
-
-  LambdaExecutionRole:
-    Type: AWS::IAM::Role
-    Properties:
-      RoleName: MyLambdaRole
-      AssumeRolePolicyDocument:
-        Version: '2012-10-17'
-        Statement:
-          - Effect: Allow
-            Principal:
-              Service: lambda.amazonaws.com
-            Action: sts:AssumeRole
-      ManagedPolicyArns:
-        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
-
-Outputs:
-  LambdaFunctionNameOutput:
-    Description: Lambda Function Name
-    Value: MyHelloWorldLambda
+Maintained a positive and collaborative approach, ensuring full alignment with the team and avoiding any negative or bureaucratic behavior.
 
 
-  Application:
-    Type: AWS::CodeDeploy::Application
-    Properties:
-      ApplicationName: MyCodeDeployApp
+Values Integrity
 
-  DeploymentGroup:
-    Type: AWS::CodeDeploy::DeploymentGroup
-    Properties:
-      ApplicationName: !Ref Application
-      DeploymentGroupName: MyDeploymentGroup
-      DeploymentConfigName: CodeDeployDefault.AllAtOnce
-      ServiceRoleArn: !GetAtt CodeDeployRole.Arn
+Ensured timely completion of all assigned tasks.
 
-  CodeDeployRole:
-    Type: AWS::IAM::Role
-    Properties:
-      RoleName: CodeDeployServiceRole
-      AssumeRolePolicyDocument:
-        Version: '2012-10-17'
-        Statement:
-          - Effect: Allow
-            Principal:
-              Service: codedeploy.amazonaws.com
-            Action: sts:AssumeRole
-      ManagedPolicyArns:
-        - arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole
-        - arn:aws:iam::aws:policy/AWSCodeDeploy_ReadOnlyAccess
+Executed all tasks with precision and control, verifying each change before moving to production, in line with Barclays standards and risk policies.
 
-Outputs:
-  LambdaFunctionNameOutput:
-    Description: Lambda Function Name
-    Value: !Ref LambdaFunctionName
-  CodeDeployApplicationNameOutput:
-    Description: CodeDeploy Application Name
-    Value: !Ref Application
-  DeploymentGroupNameOutput:
-    Description: CodeDeploy Deployment Group Name
-    Value: MyDeploymentGroup
+
+Values Service
+
+Managed a common Docker template for all ECS applications, creating a generic template that streamlined processes and reduced maintenance efforts. This initiative helped Barclays save costs by tagging all AWS resources.
+
+Developed an environment comparison checker utility to identify differences between AWS environments and created an environment manifest comparison utility, reducing manual efforts for developers and testers. Handled ad-hoc releases for map-tagging activities, optimizing AWS resource costs.
+
+Automated various tasks throughout the past year and adopted Manifest for infrastructure, saving time and tracking deployments more effectively. Optimized the map tagging job for better results and added several resources.
+
+
+Values Excellence
+
+Consistently exceeded expectations, delivering high-quality work for the team.
+
+
+Values Stewardship
+
+Made improvements in work processes, ensuring no breaches in mandatory training and timesheets.
+
+Helped identify root causes of incidents and took ownership of preventive measures, aligning with Issues Management.
+
+Promptly reported all risks and incidents upon discovery, following the defined process for the business area.
+
