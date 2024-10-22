@@ -51,3 +51,16 @@ This migration enhanced the scalability and reliability of the environment, prov
 
 Utilized AppDynamics to monitor application health and performance, providing early detection of potential issues.
 This allowed for addressing root causes of performance bottlenecks, resulting in better system stability and improved service delivery.
+
+
+
+
+
+
+
+Deployed Horizontal Pod Autoscaling (HPA) to dynamically scale pods based on CPU load, ensuring that resources are efficiently utilized during high-demand periods and scaled down during low activity.
+This approach improved the reliability and performance of services delivered to clients by ensuring optimal resource allocation, even under fluctuating loads.
+Enhanced Data Security with Protegrity API for Tokenization
+
+Onboarded the Protegrity API to tokenize customer credit card numbers, enhancing data privacy and security for sensitive financial information.
+This innovation strengthened the data protection framework, delivering a more secure and compliant solution to meet client expectations.
