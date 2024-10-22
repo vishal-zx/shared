@@ -37,27 +37,7 @@ By focusing on these areas, I aim to continue delivering exceptional results and
 
 
 
-Active Participation in Sprint Planning and Retrospectives
-
-Consistently contributed to sprint planning sessions by helping to prioritize user stories and ensure clear acceptance criteria.
-Actively participated in retrospectives to identify areas of improvement in the team's processes, focusing on continuous improvement of sprint velocity and team collaboration.
-Collaborated with Product Owners to Refine the Backlog
-
-Worked closely with product owners to refine and groom the backlog, ensuring that high-priority tasks are well-defined and aligned with business objectives.
-Regularly reviewed the backlog to remove outdated or irrelevant tasks and ensure clarity and prioritization of user stories.
-Adopted Agile Tools for Improved Workflow Management
-
-Utilized Jira to track and manage user stories, tasks, and bug fixes, ensuring that the team remained on track with project timelines.
-Implemented dashboards and reports in Jira to monitor sprint progress, helping the team maintain transparency and address bottlenecks early.
-Focused on Incremental Delivery for Faster Client Feedback
-
-Adopted an incremental delivery approach to break down larger tasks into smaller, manageable user stories, allowing for quicker client feedback and course corrections.
-This helped ensure that product features were delivered progressively and that client needs were met more efficiently.
-Promoted Cross-Functional Collaboration
-
-Encouraged collaboration between development, operations, and testing teams to streamline workflows and reduce bottlenecks, promoting a more agile and responsive development environment.
-This cross-functional approach helped in resolving blockers faster and improving overall sprint delivery.
-Introduced Automated Testing and CI/CD Pipeline Enhancements
+Over the past period, I have focused on enhancing automation, security, scalability, and performance in line with Agile methodologies and client-focused objectives. I integrated CyberArk Conjur Secret Management (CSM) to automate secret handling, reducing manual intervention and improving security, while ensuring proper certificate management and applying image patching to mitigate risks. To optimize performance, I deployed Filebeat for centralized logging, improving root cause analysis, and implemented Horizontal Pod Autoscaling (HPA) to dynamically manage resources based on CPU load. Additionally, I contributed to migrating our project to AWS, boosting system scalability and reliability. I also introduced SonarQube into our CI/CD pipeline to ensure code quality and onboarded the Protegrity API to enhance data security by tokenizing customer credit card information. Throughout this period, I actively embraced Agile practices, contributing to sprint planning, refining the backlog with product owners, and fostering collaboration to improve team productivity and service delivery.
 
 Helped improve the pipeline by automating testing processes, ensuring that code changes were tested and deployed more frequently, aligning with Agile principles of continuous integration and delivery.
 This enabled faster and more reliable releases, contributing to a more responsive backlog and better alignment with business needs.
