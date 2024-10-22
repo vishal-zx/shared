@@ -34,3 +34,20 @@ Looking ahead, I see several areas for further development and contribution:
 
 
 By focusing on these areas, I aim to continue delivering exceptional results and contributing to the success of our team and Barclays as a whole.
+
+
+
+Integrated SonarQube into the CI/CD pipeline to automatically check for vulnerabilities and enforce best coding practices.
+This approach identified and fixed potential security and quality issues at the root, ensuring more resilient and reliable software delivery.
+
+Implemented the CyberArk Conjur Secret Management (CSM) tool, automating the retrieval and management of secrets.
+This resolved issues of manual errors and security vulnerabilities, delivering a more secure and reliable process for handling sensitive information.
+
+Deployed Filebeat to aggregate and centralize logs, allowing for better visibility into system behaviors and quicker identification of issues.
+This has improved the ability to diagnose and resolve root causes of problems, contributing to higher quality and more reliable services.
+
+Contributed to the successful migration of the project to AWS, addressing limitations in the existing infrastructure.
+This migration enhanced the scalability and reliability of the environment, providing a long-term solution to performance challenges.
+
+Utilized AppDynamics to monitor application health and performance, providing early detection of potential issues.
+This allowed for addressing root causes of performance bottlenecks, resulting in better system stability and improved service delivery.
