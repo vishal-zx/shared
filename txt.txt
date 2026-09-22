@@ -1,0 +1,16 @@
+To successfully navigate the initial HR engagement round at Conviva, you must align your engineering background with their focus on high-scale data infrastructure and collaborative team culture.
+Tackling the Conviva HR Screen
+Focus on High-Level Tech Fit: The HR screen at Conviva is designed to gauge your past engineering experience and foundational technical compatibility without diving into complex system design. Be prepared to articulate the architecture of your past projects clearly to a non-technical or semi-technical audience.
+Emphasize Scale and Reliability: Conviva processes trillions of events daily and focuses on real-time streaming and operational intelligence. When discussing your Barclays experience, emphasize high-scale metrics like maintaining 99.9% uptime, supporting 3x traffic growth, and building data pipelines that span 250,000+ reports.  
+Demonstrate Cultural Alignment: Conviva strongly values collaboration, openness to feedback, and the ability to thrive in fast-paced, ambiguous environments. Have two or three behavioral examples ready using the STAR (Situation, Task, Action, Result) method to showcase your teamwork and adaptability.
+Show Business Context: Conviva's platform connects technical telemetry directly to customer outcomes and revenue. Mirror this mindset by highlighting how your infrastructure optimizations at Barclays directly reduced cloud costs by 30% and how your GenAI report classification saved over 1,500 hours of manual work.  
+Your "Introduce Yourself" Script
+Structure your introduction using a Present-Past-Future framework. Here is a customized pitch based directly on your resume that connects your current trajectory to Conviva's engineering needs:
+The Present (Who you are right now)
+"I am a Cloud and Data Platform Engineer currently working as an SDE2 at Barclays. I specialize in building highly scalable AWS platforms, managing production Kubernetes workloads, and engineering enterprise data pipelines."
+  
+The Past (Your core impact and achievements)
+"Over the past three years, my role has evolved from core DevOps to data-centric platform engineering. Recently, I built an enterprise data lineage pipeline that automated ingestion for over 250,000 reports, which cut discovery time from hours down to just five minutes. Prior to that, I managed production Kubernetes clusters, optimized AWS infrastructure to support 3x traffic growth, and led CI/CD automation that cut deployment times by 40%. I also have recent experience deploying enterprise GenAI solutions using AWS Bedrock to automate massive-scale data classification."
+  
+The Future (Why Conviva)
+"I’m currently looking to transition to a product-driven company that tackles massive-scale distributed systems and high-performance data challenges. Conviva’s focus on real-time operational intelligence and handling internet-scale telemetry aligns perfectly with my background in optimizing high-traffic AWS infrastructure and building robust data pipelines. I’m excited about the opportunity to bring my SRE and platform engineering experience to your team."
